@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start IT Now - HR Workflow Automation | Professional Data Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #f7f7f7,#649ef6);
+            color: rgb(251, 249, 249);
+            padding: 40px ;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .logo-section {
+            margin-bottom: 30px;
+        }
+        
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo-placeholder i {
+            font-size: 2.5rem;
+            margin-right: 15px;
+        }
+        
+        
+        .product-suite {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .product-name {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 500;
+            font-size: 1.4rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .tagline h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Benefits Section */
+        .section {
+            padding: 60px 0;
+            background: #F4F7FA
+        }
+        
+        .section:nth-child(even) {
+            background: #F4F7FA;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1f1e1f;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #8ea1f5, #4aa4ae);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .benefits-grid, .features-grid, .personas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-card, .feature-card, .persona-card {
+            background: linear-gradient(135deg, #0D1B40, #1A237E);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #52cde0, #4b92a2);
+        }
+        
+        .benefit-card:hover, .feature-card:hover, .persona-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .benefit-icon, .feature-icon, .persona-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .benefit-metric {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #f8f4f4;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-description, .feature-description, .persona-goal {
+            color: #f0e7cd;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .feature-name, .persona-role {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #f4f8f8;
+            margin-bottom: 10px;
+        }
+        
+        /* Solution Diagram */
+        .lifecycle-diagram {
+            background:#F4F7FA;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .lifecycle-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .lifecycle-step {
+            flex: 1;
+            min-width: 150px;
+            position: relative;
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8497eb, #7ba7fa);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .step-name {
+            font-weight: 600;
+            color: #120b14;
+            margin-bottom: 5px;
+        }
+        
+        .step-description {
+            font-size: 0.9rem;
+            color: #1A237E;
+        }
+        
+        .arrow {
+            position: absolute;
+            right: -15px;
+            top: 50px ;
+            transform: translateY(-50%);
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+        
+        .lifecycle-step:last-child .arrow {
+            display: none;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .trust-message {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item i {
+            font-size: 1.2rem;
+            color: #667eea;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(135deg, #8293df, #5f81f3);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            padding: 15px 30px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-secondary:hover {
+            background: white;
+            color: #2d3748;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a202c;
+            color: #a0aec0;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .benefits-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-suite {
+                gap: 10px;
+            }
+            
+            .product-name {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+            
+            .lifecycle-steps {
+                flex-direction: column;
+            }
+            
+            .arrow {
+                display: none !important;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .header {
+                background: #667eea !important;
+                color: white !important;
+            }
+            
+            .benefit-card, .feature-card, .persona-card {
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+                break-inside: avoid;
+            }
+            
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+<header class="header" style="
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('bg.png') center/cover no-repeat;
+    padding-bottom: 20px;
+    color: white;
+">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                <div class="logo-placeholder">
+                   <img src="white-logo.png" alt="Company Logo" style="height: 70px; margin-right: 15px;">
+                </div>
+                    <div class="product-suite">
+                        <span class="product-name">Talent Sift</span>
+                        <span class="product-name">My Buddy</span>
+                        <span class="product-name">Easy Automate</span>
+                    </div>
+                </div>
+                <div class="tagline">
+                 <h1 style="font-size:xx-large;">End-to-End Agent-Driven HR Workflow Automation — From Hire to Retire</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" style="padding: 10px 10px ";>
+        <div class="container">
+            <h2 class="section-title" style="font-weight: 700;">Our Intelligent Solutions</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🧠</div>
+                    <div class="benefit-metric">Talent Sift (AI)</div>
+                    <div class="benefit-description">Harness AI to streamline and enhance your talent acquisition and resume screening processes.</div>
+                </div>
+                    <div class="benefit-card">
+                    <div class="benefit-icon">🤖</div>
+                    <div class="benefit-metric">My Buddy (AI)</div>
+                    <div class="benefit-description">Boost productivity with a smart chat assistant that supports your team anytime.</div>
+                </div>
+                    <div class="benefit-card">
+                    <div class="benefit-icon">🔁</div>
+                    <div class="benefit-metric">Easy Automate</div>
+                    <div class="benefit-description">Automate hiring, onboarding, and offboarding for a seamless HR experience.</div>
+                </div>
+                </div>
+            </section>
+
+    <!-- Key Benefits Section -->
+    <section class="section" style="padding: 10px 10px ";>
+        <div class="container">
+            <h2 class="section-title" style="font-weight: 700;">Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-metric">35% Faster Hiring</div>
+                    <div class="benefit-description">AI-powered multi-agent screening and scheduling</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-metric">40% Cost Reduction</div>
+                    <div class="benefit-description">Eliminate manual processes and recruitment agency fees</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-metric">95% Screening Accuracy</div>
+                    <div class="benefit-description">Advanced semantic parsing with bias-free matching</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤖</div>
+                    <div class="benefit-metric">24/7 Employee Support</div>
+                    <div class="benefit-description">'My Buddy' resolves 80% of HR queries instantly</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-metric">325% ROI</div>
+                    <div class="benefit-description">Proven return on automation investment within 12 months</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <div class="benefit-metric">80% Retention Boost</div>
+                    <div class="benefit-description">Proactive engagement reduces turnover significantly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Features Section -->
+    <section class="section" style="padding: 10px 10px;">
+        <div class="container">
+            <h2 class="section-title">Product Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <div class="feature-name">Multi-Agent Orchestration</div>
+                    <div class="feature-description">3 specialized AI agents working together seamlessly</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <div class="feature-name">Resume Parsing</div>
+                    <div class="feature-description">Bias-free semantic analysis with 95% accuracy</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <div class="feature-name">Employee Engagement</div>
+                    <div class="feature-description">Dedicated 'My Buddy' conversational AI agent</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-name">Workflow Automation</div>
+                    <div class="feature-description">No-code customization for all HR processes</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <div class="feature-name">Real-time Analytics</div>
+                    <div class="feature-description">Predictive insights and performance tracking</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-name">Smart Integrations</div>
+                    <div class="feature-description">150+ HR system connections with API-first design</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-name">Mobile Access</div>
+                    <div class="feature-description">Complete functionality across all devices</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-name">Compliance Management</div>
+                    <div class="feature-description">Enterprise-grade security and data protection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Diagram Section -->
+    <section class="section" style="padding: 15px 0">
+        <div class="container">
+            <h2 class="section-title">Employee Lifecycle Automation</h2>
+            <div class="lifecycle-diagram" style="padding: 10px 10px;">
+                <div class="lifecycle-steps">
+                    <div class="lifecycle-step">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="step-name">Recruitment</div>
+                        <div class="step-description">AI-powered sourcing & screening</div>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="step-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="step-name">Onboarding</div>
+                        <div class="step-description">Automated documentation & training</div>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="step-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="step-name">Engagement</div>
+                        <div class="step-description">24/7 support with My Buddy</div>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="step-name">Performance</div>
+                        <div class="step-description">Real-time tracking & analytics</div>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <div class="step-icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        <div class="step-name">Offboarding</div>
+                        <div class="step-description">Seamless exit workflows</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- User Personas Section -->
+<section class="section" style="padding: 10px 10px">
+    <div class="container">
+        <h2 class="section-title">Benifits to Personas</h2>
+
+        <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: nowrap;">
+
+            <div class="persona-card" style="flex: 1; padding: 10px;">
+                <div class="persona-role">CHRO</div>
+                <div class="persona-goal">Drive strategic HR transformation</div>
+            </div>
+
+            <div class="persona-card" style="flex: 1; padding: 10px;">
+                <div class="persona-role">Director HR</div>
+                <div class="persona-goal">Optimize employee lifecycle workflows</div>
+            </div>
+
+            <div class="persona-card" style="flex: 1; padding: 10px;">
+                <div class="persona-role">CIO</div>
+                <div class="persona-goal">Ensure IT compatibility and security</div>
+            </div>
+
+            <div class="persona-card" style="flex: 1; padding: 10px;">
+                <div class="persona-role">Talent Agency Owner</div>
+                <div class="persona-goal">Deliver ROI to clients faster</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="about-us" style="padding: 20px; font-family: Arial, sans-serif;">
+  <h2 style="font-weight: 700; margin-bottom: 10px;">About Us</h2>
+  
+  <div class="about-section" style="margin-bottom: 20px;">
+    <h3 style="cursor: pointer; color: #007BFF;" onclick="toggleSection('section1')">
+      Empowering Business Transformation with Start IT Now
+    </h3>
+    <div id="section1" style="max-height: 100px; overflow: hidden; transition: max-height 0.4s ease;">
+      <p>
+        At Start IT Now, we enable organizations to excel in today’s fast-paced digital environment through advanced business process automation and Agentic AI solutions. Our expertise helps clients streamline operations and elevate customer engagement, fostering meaningful transformation across industries.
+
+        By harnessing the power of Artificial Intelligence, we drive measurable improvements in operational efficiency and enable more informed decision-making. Our sector-spanning solutions ensure that businesses can quickly respond to evolving market demands with agility and precision.
+          <h3 style="cursor: pointer; color: #007BFF;" onclick="toggleSection('section2')">
+      Innovation as a Cornerstone
+    </h3>
+          <ul>
+        <li>We prioritize <em>innovation</em>, delivering customized solutions that consistently exceed customer expectations.
+        Our approach ensures every offering is closely aligned with unique business needs, guaranteeing optimal adoption and satisfaction.</li>
+      </ul>
+    <h3 style="cursor: pointer; color: #007BFF;" onclick="toggleSection('section3')">
+      Commitment to Partnership and Support
+    </h3>
+          <ul>
+        <li>Through strong strategic partnerships and dedicated expert guidance, we cultivate environments where organizations thrive.
+        We are committed to empowering our clients to embrace new technologies, optimize performance, and future-proof their operations.</li>
+      </ul>
+      
+    </div>
+    <button onclick="toggleSection('section1', this)" style="background:none; border:none; color:#007BFF; cursor:pointer; padding:0;">Read More</button>
+  </div>
+  
+  <p style="font-weight: 600; margin-top: 30px;">
+    Choose Start IT Now and unlock new opportunities for growth, resilience, and technological advancement.
+  </p>
+</section>
+
+<script>
+  function toggleSection(id, btn) {
+    const section = document.getElementById(id);
+    if (section.style.maxHeight === 'none') {
+      section.style.maxHeight = '100px';
+      btn.textContent = 'Read More';
+    } else {
+      section.style.maxHeight = 'none';
+      btn.textContent = 'Read Less';
+    }
+  }
+</script>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="trust-message">
+                    A trustable AI solution where your data remains safe.
+                </div>
+                <div>
+                     <img src="white-logo.png" alt="Company Logo" style="height: 70px; margin-right: 15px; margin-bottom: -20px;;">
+                </div>
+              
+                <div class="contact-info" style="margin-top: -15px; margin-bottom: -20px;">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91-8431403016</span>
+                    </div>
+                    <div class="contact-info">
+                    <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span><a href="https://www.startitnow.co.in" target="_blank" style="color: white;">www.startitnow.co.in</a></span>
+                 </div>
+                </div>
+                <div class="contact-item" style="margin-top: -80px;">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Electronic City, Phase-2, Bengaluru - 560100, INDIA</span>
+                </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://startitnow.co.in/contact.php" class="cta-primary">
+                        <i class="fas fa-rocket"></i>
+                        Get Started Today, Call us for Demonstration.
+                    </a>
+                    <a href="https://forms.qntrlusercontent.com/external/publicform/c95759858f1aad5909f91e2e80dfdef89d0d4326def1248a92198925b3d8ba3036b9e370117bf50ec4adedba342fc116" class="cta-secondary">
+                        <i class="fas fa-headset"></i>
+                        Customer Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Start IT Now. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
